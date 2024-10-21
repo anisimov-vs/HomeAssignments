@@ -4,25 +4,31 @@
 #include <iostream>
 #include <fstream>
 #include <string> // Include string for std::string
+#include <sys/stat.h>
 
 namespace assignment_2a {
+
+  off_t file_size(const char *filename) {
+    struct stat st;
+    if (stat(filename, &st) == 0) 
+      return st.st_size;
+    return -1;
+  }
+  
   void reverse(){
     // Prompt for file path
     std::string inputFilePath;
     std::cout << "Path to the file: ";
     std::cin >> inputFilePath;
 
+    off_t fileSize = file_size(inputFilePath.c_str());
+    
     // Open file in binary mode and position at the end
     std::ifstream infile(inputFilePath, std::ios::binary | std::ios::ate);
     if (!infile) {
       std::cerr << "Error: Unable to open file \"" << inputFilePath << "\"\n";
       return;
     }
-
-    // Get file size
-    std::streamsize fileSize = infile.tellg();
-    std::cout << "File size: " << fileSize << " bytes\n";
-    infile.seekg(0, std::ios::beg); // Go back to the beginning
 
     // Create buffer
     char* buffer = new char[fileSize];
