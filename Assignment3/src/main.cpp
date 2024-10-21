@@ -118,7 +118,7 @@ TEST(DecepticonTest, TransformAndAttack) {
 }
 
 // Test cases for Dinobot class
-TEST(DinobotnTest, Initialization) {
+TEST(DinobotTest, Initialization) {
     Dinobot dinobot;
     EXPECT_EQ(dinobot.getDirection(), Direction::North);
     EXPECT_EQ(dinobot.getName(), "Dinobot 404");
