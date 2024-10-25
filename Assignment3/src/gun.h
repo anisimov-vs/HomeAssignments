@@ -1,6 +1,8 @@
+// Anisimov Vasiliy st129629@student.spbu.ru
+// Assignment 3
+
 #ifndef GUN_h
 #define GUN_h
-
 
 class Gun {
     public:
