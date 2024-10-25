@@ -1,3 +1,6 @@
+// Anisimov Vasiliy st129629@student.spbu.ru
+// Assignment 3
+
 #ifndef DECEPTICON_h
 #define DECEPTICON_h
 

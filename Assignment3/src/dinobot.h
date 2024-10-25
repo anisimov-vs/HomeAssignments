@@ -1,3 +1,6 @@
+// Anisimov Vasiliy st129629@student.spbu.ru
+// Assignment 3
+
 #ifndef Dinobot_h
 #define Dinobot_h
 

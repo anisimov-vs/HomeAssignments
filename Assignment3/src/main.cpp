@@ -1,3 +1,6 @@
+// Anisimov Vasiliy st129629@student.spbu.ru
+// Assignment 3
+
 #include <gtest/gtest.h>
 #include "transformer.h"
 #include "autobot.h"

@@ -1,5 +1,7 @@
-#include "dinobot.h"
+// Anisimov Vasiliy st129629@student.spbu.ru
+// Assignment 3
 
+#include "dinobot.h"
 
 bool Dinobot::transform() {
     return true;

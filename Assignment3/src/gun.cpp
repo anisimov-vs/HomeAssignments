@@ -1,6 +1,8 @@
+// Anisimov Vasiliy st129629@student.spbu.ru
+// Assignment 3
+
 #include "gun.h"
 #include <iostream>
-
 
 void Gun::setAmmo(int ammo) {
     _ammo = ammo;

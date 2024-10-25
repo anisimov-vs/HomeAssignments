@@ -1,5 +1,7 @@
-#include "transformer.h"
+// Anisimov Vasiliy st129629@student.spbu.ru
+// Assignment 3
 
+#include "transformer.h"
 
 bool Transformer::move() {
     return true;
