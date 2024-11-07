@@ -10,3 +10,5 @@ Home assignments for C++ Programming course in SPbU
 - [Home Assignment 2](Assignment2)
 - - [Home Assignment 2a](Assignment2/Assignment2a)
 - - [Home Assignment 2b](Assignment2/Assignment2b)
+- [Home Assignment 3](Assignment3)
+- [Home Assignment 4](Assignment4)
