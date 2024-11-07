@@ -2,8 +2,7 @@
 CXX = g++
 
 # Compiler flags
-CXXFLAGS = -Wall -std=c++17 -I$(SRC_DIR)
-# CXXFLAGS += -I/usr/local/include/gtest
+CXXFLAGS = -Werror -Wpedantic -Wall -std=c++17 -I$(SRC_DIR)
 
 # Linker flags
 LDFLAGS = -lgtest -lgtest_main -pthread

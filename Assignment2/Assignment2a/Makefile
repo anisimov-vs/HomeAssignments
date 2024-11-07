@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++17
+CXXFLAGS = -Werror -Wpedantic -Wall -std=c++17 
 
 all: main
 
