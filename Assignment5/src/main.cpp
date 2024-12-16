@@ -22,5 +22,7 @@ int main() {
         std::cout << transformer->openFire() << std::endl;
         std::cout << transformer->ulta() << std::endl;
         std::cout << std::endl;
+
+        delete transformer;
     }
 }
