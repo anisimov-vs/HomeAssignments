@@ -23,9 +23,4 @@ int main() {
         std::cout << transformer->ulta() << std::endl;
         std::cout << std::endl;
     }
-
-    // Clean up
-    for (auto transformer : transformers) {
-        delete transformer;
-    }
 }

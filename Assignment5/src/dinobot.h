@@ -14,9 +14,9 @@ class Dinobot: public Transformer {
         Dinobot(enum Direction direction = Direction::North, Gun* gun = new Gun(), std::string name = "Dinobot 404", int level = 10, int strength = 10, int fuel = 100, int health = 100, Eye eye = Eye::Green, int intensity = 10) : Transformer(direction, gun, name, level, strength, fuel, health), _eye(eye), _intensity(intensity)  { };
         ~Dinobot() { }
 
-        std::string transform() const;
-        std::string openFire() const;
-        std::string ulta() const;
+        std::string transform() const override;
+        std::string openFire() const override;
+        std::string ulta() const override;
 
         bool roar();
 

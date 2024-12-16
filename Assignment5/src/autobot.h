@@ -14,9 +14,9 @@ class Autobot: public Transformer {
         Autobot(enum Direction direction = Direction::North, Gun* gun = new Gun(), std::string name = "Autobot 404", int level = 10, int strength = 10, int fuel = 100, int health = 100, Eye eye = Eye::Blue, int shield = 10) : Transformer(direction, gun, name, level, strength, fuel, health), _eye(eye), _shield(shield)  { };
         ~Autobot() { }
 
-        std::string transform() const;
-        std::string openFire() const;
-        std::string ulta() const;
+        std::string transform() const override;
+        std::string openFire() const override;
+        std::string ulta() const override;
 
         bool protect();
 

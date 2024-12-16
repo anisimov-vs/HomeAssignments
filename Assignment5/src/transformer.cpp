@@ -16,6 +16,17 @@ bool Transformer::jump() {
     return true;   
 }
 
+std::string Transformer::transform() const {
+    return "Method: Transform\n"; 
+}
+
+std::string Transformer::openFire() const {
+    return "Method: OpenFire\n";
+}
+
+std::string Transformer::ulta() const {
+    return "Method: Ulta\n";
+}
 
 void Transformer::setHealth(int health) {
     _health = health;

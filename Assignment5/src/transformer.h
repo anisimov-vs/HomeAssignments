@@ -18,15 +18,9 @@ class Transformer {
         bool turn(enum Direction direction);
         bool jump();
 
-        virtual std::string transform() const {
-            return "Method: Transform\n"; 
-        }
-        virtual std::string openFire() const {
-            return "Method: OpenFire\n";
-        }
-        virtual std::string ulta() const {
-            return "Method: Ulta\n";
-        }
+        virtual std::string transform() const;
+        virtual std::string openFire() const;
+        virtual std::string ulta() const;
 
         void setDirection(Direction dir);
         Direction getDirection() const;

@@ -6,6 +6,7 @@
 #include "autobot.h"
 #include "decepticon.h"
 #include "dinobot.h"
+#include <string>
 
 
 // Test cases for Gun class
@@ -311,6 +312,23 @@ TEST(DinobotTest, TransformOpenFireUlta) {
     EXPECT_EQ(dinobot.transform(), "Class: Dinobot\nMethod: Transform\n");
     EXPECT_EQ(dinobot.openFire(), "Class: Dinobot\nMethod: OpenFire\n");
     EXPECT_EQ(dinobot.ulta(), "Class: Dinobot\nMethod: Ulta\n");
+}
+
+
+TEST(TransformerTests, Virtual) {
+    std::vector<Transformer*> transformers;
+
+    for (int i = 0; i < 3; ++i) {
+        transformers.push_back(new Transformer(Direction::North, new Gun(), "Transformer"));
+        transformers.push_back(new Autobot(Direction::North, new Gun(), "Autobot"));
+        transformers.push_back(new Decepticon(Direction::North, new Gun(), "Decepticon"));
+    }
+
+    for (auto transformer : transformers) {
+        EXPECT_EQ(transformer->transform(), transformer->getName() == "Transformer" ? "Method: Transform\n" : "Class: " + transformer->getName() + "\nMethod: Transform\n");
+        EXPECT_EQ(transformer->openFire(), transformer->getName() == "Transformer" ? "Method: OpenFire\n" : "Class: " + transformer->getName() + "\nMethod: OpenFire\n");
+        EXPECT_EQ(transformer->ulta(), transformer->getName() == "Transformer" ? "Method: Ulta\n" : "Class: " + transformer->getName() + "\nMethod: Ulta\n");
+    }
 }
 
 
